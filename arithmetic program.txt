@@ -1,0 +1,76 @@
+import java.util.Scanner;
+class Addition  //sub calss
+{ 
+	int add(int x,int y)
+	{
+		return x+y;
+	}
+}
+class Subtraction //sub class
+{
+	int sub(int x,int y)
+	{
+		return x-y;
+	}
+}
+class Multiple //sub class
+{
+	int mul(int x,int y)
+	{
+		return x*y;
+	}
+}
+class Division  //sub class
+{
+	float div(int x,int y)
+	{
+		return (float)x/y;//type casting
+	}
+}
+class ModDivision //sub class
+{
+    int moddiv(int x, int y)
+	{
+		return x%y;
+	}
+}
+class Main  //main calss
+{
+	public static void main(String[] args) 
+	{
+	Scanner s= new Scanner(System.in);
+	System.out.println("enter the number n1:");
+	int n1=s.nextInt();
+	System.out.println("enter the number n2:");
+	int n2=s.nextInt();
+	System.out.println("===choice===");
+	System.out.println("1.add/n2.sub/n3.mul/n4.div/n5.moddiv");
+	System.out.println("enter the choice");
+	int choice=s.nextInt();
+	switch(choice)
+		{
+			case 1:Addition ad=new Addition();
+			                  int i1=ad.add(n1,n2);
+							  System.out.println("sum :"+i1);
+				break;
+			case 2:Subtraction su=new Subtraction();
+			                   int i2=su.sub(n1,n2);
+							   System.out.println("sub :"+i2);
+				break;
+			case 3:Multiple ml=new Multiple();
+			                 int i3= ml.mul(n1,n2);
+							 System.out.println("mul :"+i3);
+				break;
+			case 4:Division dv= new Division();
+			                float i4=dv.div(n1,n2);
+							System.out.println("div :"+i4);
+				break;
+			case 5:ModDivision md=new ModDivision();
+			                  int i5=md.moddiv(n1,n2);
+							  System.out.println("moddiv :"+i5);
+				break;
+			default:
+				System.out.println("invalid choice......");
+		}
+	}
+}
